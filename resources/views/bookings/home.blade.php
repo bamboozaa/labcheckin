@@ -144,7 +144,7 @@
                                 title: response.status === 'success' ? 'Success' :
                                     'Error',
                                 text: response.message,
-                                timer: 1500, // Timer in milliseconds (3 seconds)
+                                timer: 1000, // Timer in milliseconds (3 seconds)
                                 showConfirmButton: false // Hide the "OK" button
                             }).then(function() {
                                 redirectToAnotherPage(response);
