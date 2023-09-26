@@ -149,8 +149,7 @@
                             }).then(function() {
                                 redirectToAnotherPage(response);
                             }).catch((err) => {
-                                Swal.fire("Failed!", "There was something wronge",
-                                    "warning");
+                                Swal.fire("Failed!", "There was something wronge", "warning");
                             });
                         },
                         error: function() {
