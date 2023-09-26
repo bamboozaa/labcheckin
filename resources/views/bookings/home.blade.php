@@ -22,8 +22,8 @@
         }
 
         /* .navTrigger {
-                    display: none;
-                } */
+                                display: none;
+                            } */
     </style>
 @stop
 @section('content')
@@ -144,10 +144,14 @@
                                 title: response.status === 'success' ? 'Success' :
                                     'Error',
                                 text: response.message,
-                                timer: 6000, // Timer in milliseconds (3 seconds)
+                                timer: 1500, // Timer in milliseconds (3 seconds)
                                 showConfirmButton: false // Hide the "OK" button
+                            }).then(function() {
+                                redirectToAnotherPage(response);
+                            }).catch((err) => {
+                                Swal.fire("Failed!", "There was something wronge",
+                                    "warning");
                             });
-                            redirectToAnotherPage(response);
                         },
                         error: function() {
                             console.error("Error sending data");
